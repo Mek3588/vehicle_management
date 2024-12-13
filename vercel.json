@@ -3,17 +3,17 @@
     "builds": [
       {
         "src": "vehicle-dashboard/package.json",
-        "use": "@vercel/react"
+        "use": "@vercel/static-build"
       },
       {
-        "src": "vehicle-backend/api/server.js",
+        "src": "vehicle-backend/api/server.js",  
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "/vehicle-backend/api/$1"
+        "dest": "/vehicle-backend/api/$1"  
       },
       {
         "src": "/(.*)",
